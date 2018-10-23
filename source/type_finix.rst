@@ -1,7 +1,7 @@
-Finix overall description
+Wings整体介绍
 ========================
 
-The overall process of finix
+Wings整体操作描述
 -----------------------------
 
 1. 设置用户工程所在路径 
@@ -11,11 +11,11 @@ The overall process of finix
 
 .. image:: /image/principle.png
 
-C type description
+C语言类型描述
 ------------------
 .. image:: /image/type.png
 
-Testing example
+举例说明
 ----------------
 
 code::
@@ -77,7 +77,7 @@ PSD file::
     <returnType returnType="void" baseType1="BuiltinType" type="ZOA_VOID" />
   </StructTypeTest1
 
-PSD file attribute description
+PSD 文件属性描述
 ------------------------------
 
 +------------------------+------------------------+
@@ -147,7 +147,7 @@ PSD file attribute description
 |returnType              |代表返回值类型          | 
 +------------------------+------------------------+
 
-Finix test data description
+Wings测试用例描述
 -----------------
 finix通过编译技术提取函数参数信息与对应的全局变量信息，利用这些信息生成对应的测试用例，底层保存为json格式的形式
 finix为了更好的展示测试数据，采用数据表格可以表达任意深度和多层次的数据关系，用户只需要对表格数据进行编辑，

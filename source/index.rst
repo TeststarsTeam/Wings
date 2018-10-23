@@ -11,9 +11,9 @@ Welcome to finixs's documentation!
    
    
 
-   About finix <about.rst>
-   Installing and Running finix <install_finix.rst>
-   Finix overall description <type_finix.rst>
+   Wings介绍 <about.rst>
+   安装和运行Wings <install_finix.rst>
+   Wings整体描述 <type_finix.rst>
    tutorial.rst
    
    

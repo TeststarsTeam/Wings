@@ -1,4 +1,4 @@
-Installing and Running finix
+安装和运行Wings
 =============
 On Windows Systems
 -----------------------
@@ -36,7 +36,7 @@ On Unix Systems
 
 5. 完成驱动与值的生成
 
-Running finix
+运行Wings
 --------------
 1.解压wings安装包，点击wings.exe ，打开wings界面图如下
 
