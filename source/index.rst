@@ -11,9 +11,9 @@ Welcome to Wings documentation!
    
    
 
-   Wings介绍 <about.rst>
-   安装和运行Wings <install_finix.rst>
-   Wings整体描述 <type_finix.rst>
+   Introduction to Wings <about.rst>
+   Unit testing automatic generation technology <install_finix.rst>
+   Parameter Structure Description(PSD) <type_finix.rst>
    tutorial.rst
    
    
