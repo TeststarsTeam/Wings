@@ -1,68 +1,20 @@
-安装和运行Wings
+Unit testing automatic generation technology
 =============
-On Windows Systems
+Features of wings automatic generation technology
 -----------------------
-1. 下载wings的安装包，在码云下载
-
-   see https://gitee.com/teststars/wings_release.git.
-
-2. 解压安装包，点击wings.exe,打开wings使用界面
-
-3. 安装vs2013及以上版本，配置系统环境变量
-
-4. 配置windows头文件系统变量，如下
-
-* C:\Program Files (x86)\VS15\VC\include;
-* C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt;
-* C:\Program Files (x86)\VS15\VC\atlmfc\include;
-* C:\Program Files (x86)\Windows Kits\8.1\Include\um;
-* C:\Program Files (x86)\Windows Kits\8.1\Include\shared;
-* C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;
+* Wings is an intelligent fully automatic test case driven generation system, and can automatically generate test drivers and parameter capture programs.
+* Wings supports the C/C ++ language and can handle any type (built-in type and complex types) of parameters, global variables, and return values.
+* Supports visual  data tables for assignment, regardless of the driver itself. Data tables can express data relationships at any depth and level, and users only need to edit the table data.Ability to distinguish between system types and custom types. 
+* Support special template assignment for complex system types, such as std::vector, rather than expanding all complex system variables.
 
 
-On Unix Systems
+The overall framework of wings
 ----------------------
-1. 下载wings的安装包，在码云下载
+First of all, wings uses static analysis technology to extract the backbone information of the program under test. The main steps are as follows:
 
-   see https://gitee.com/teststars/wings_release.git.
+* Get compilation database file for different platforms.
+* According to the compiled database file, the static analysis of the source code, the extracted information is stored in the PSD structure.
+* Read the PSD structure to generate the driver code, GoogleTest code, and the value file. The generated code compiles with the source code. Finally, the test results are output.
+* Read the PSD structure to generate the parameter capture code . The generated code is compiled with the source code to get the parameter values of the program at run time.
 
-2. 解压安装包，点击wings.exe,打开wings使用界面
-
-3. 解压wingsforlinux.tar.gz到linux目录下（其中/home/wings/nginx为linux下工程所在路径）执行以下命令::
-
-   ./wings_parse /home/wings/nginx
-
-4. 拷贝linux下生成的FunXml与GlobalXml到windows目录下
-
-5. 完成驱动与值的生成
-
-运行Wings
---------------
-1.解压wings安装包，点击wings.exe ，打开wings界面图如下
-
-.. image:: /image/finix_logo.png
-
-2.点击文件，设置被测程序所在的路径
-
-.. image:: /image/setting.png
-
-3.点击工程操作中的分析生成，对工程目录下的.c文件进行解析，保存为PSD的格式
-
-.. image:: /image/parse.png
-
-生成的文件保存在工程目录下的FunXml与GlobalXml中，分别是函数信息与全局变量的信息
-
-
-.. image:: /image/fun_global.png
-
-4.点击工程操作中的驱动生成操作，生成对应.c文件的驱动文件
-
-.. image:: /image/drive.png
-
-驱动生成完成之后，点击驱动文件结构图，则可以看到生成对应的驱动文件列表
-
-.. image:: /image/drive1.png
-
-5.点击工程操作的值生成，生成对应的测试数据，如下图
-
-.. image:: /image/json.png
+.. image:: /image/figure1.jpg
