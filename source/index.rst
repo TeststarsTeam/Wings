@@ -16,7 +16,9 @@ Welcome to Wings documentation!
    Parameter Structure Description(PSD) <psd.rst>
    Introduction unit testing code <unit_testing.rst>
    Introduction to GoogleTest code <googletest.rst>
-   Parameter capture code generation <Parameter capture.rst>
+   Parameter capture code generation <Parameter_capture.rst>
+   Handling of special assignment types <Handling.rst>
+   Data table <data.rst>
    Parameter Structure Description <type_finix.rst>
    tutorial.rst
    
