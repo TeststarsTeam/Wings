@@ -1,9 +1,13 @@
 Parameter Structure Description(PSD)
 =============
 PSD refers to the description of the source code, including class name, class member variable information, class function information, and various types of information.Type information refers to the data types of function parameters, global variables, and return values. Complex data types are expanded layer by layer to built-in types (char, int, string, and so on).The PSD structure is stored in an XML file, and different XML files store different description information.
+
 RecordDecl.xml: store the analysis and development results of structures ,unions and classes in the entire project.
+
 EnumDecl:store the enumerate information in the entire project.
+
 filename.xml : store function information for each file.
+
 A brief description of some attributes is as follows:
 
 Type attribute
