@@ -13,7 +13,8 @@ Welcome to Wings documentation!
 
    Introduction to Wings <about.rst>
    Unit testing automatic generation technology <install_finix.rst>
-   Parameter Structure Description(PSD) <type_finix.rst>
+   Parameter Structure Description(PSD) <psd.rst>
+   Parameter Structure Description <type_finix.rst>
    tutorial.rst
    
    

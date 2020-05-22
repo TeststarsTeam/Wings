@@ -16,5 +16,4 @@ First of all, wings uses static analysis technology to extract the backbone info
 * According to the compiled database file, the static analysis of the source code, the extracted information is stored in the PSD structure.
 * Read the PSD structure to generate the driver code, GoogleTest code, and the value file. The generated code compiles with the source code. Finally, the test results are output.
 * Read the PSD structure to generate the parameter capture code . The generated code is compiled with the source code to get the parameter values of the program at run time.
-
 .. image:: /image/figure1.jpg
