@@ -7,3 +7,4 @@ Introduction unit testing code
    :maxdepth: 3
    
    unit/cunit.rst
+   unit/c+unit.rst

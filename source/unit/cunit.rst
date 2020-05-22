@@ -40,3 +40,18 @@ For example: DriverReturnPrint_ngx_show_version_info ();
 
 6.The main function in the user source code needs to be commented out manually. Wings will regenerate a main function file in the driver code for testing. Wings will generate the main function file that drives main as : gtest_auto_main.cc
 Note: Users choose to use it according to their needs.
+
+
+Generate code
+-----------------------
+
+Function prototype: int coordinate_destory ( location_s * loc, size_t length, char * ch )
+The type of the return value is int , the type of the first parameter is location * , the type of the second parameter is size_t , and the type of the third parameter is char *
+Assign values to the above three parameters.
+
+The complete drive code  for the coordinate_destory function is described in detail in Figure 7 below . 
+
+.. image:: /image/figure7-1.png
+
+.. image:: /image/figure7-2.png
+

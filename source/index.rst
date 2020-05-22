@@ -15,6 +15,8 @@ Welcome to Wings documentation!
    Unit testing automatic generation technology <install_finix.rst>
    Parameter Structure Description(PSD) <psd.rst>
    Introduction unit testing code <unit_testing.rst>
+   Introduction to GoogleTest code <googletest.rst>
+   Parameter capture code generation <Parameter capture.rst>
    Parameter Structure Description <type_finix.rst>
    tutorial.rst
    
