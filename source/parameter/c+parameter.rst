@@ -48,7 +48,6 @@ How to capture a member variable of a class, a capture function is inserted in t
 	public:
 		Rectangle(Point *m_point, int m_z, std::string name, bool wings)
 		{
-			//LOGI("Rectangle::Rectangle");
 			this->m_point = m_point;
 			this->m_z = m_z;
 			this->name = name;
