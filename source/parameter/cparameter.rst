@@ -11,12 +11,59 @@ The parameter capture code for wings is stored in the paramcaputrecode folder. T
 Example of parameter capture code
 -----------------------
 
-.. image:: /image/figure17.png
+As shown in below, for the function coordinate_destroy , information about capture parameters, global variables, and return values is automatically generated.
 
-As shown in Figure 17 below, for the function coordinate_destroy , information about capture parameters, global variables, and return values is automatically generated.
+::
 
-Figure 18 below will show the automatically generated code for capturing parameters.
+	#ifndef _PARAMCAPTURE_WINGS_C_DEMO_COORDINATES_H_
+	#define _PARAMCAPTURE_WINGS_C_DEMO_COORDINATES_H_
+	#include "ParamCapture.h"
+	#include "ParamCapture_structorunion.h"
+	void ReturnCapture_coordinate_create(coordinate_s returnType);
 
-.. image:: /image/figure18.png
+	void ParamCapture_coordinate_destroy(location *loc, size_t length, char *ch);
+	void GlobalCapture_coordinate_destroy(int count);
+	void ReturnCapture_coordinate_destroy(int returnType);
+
+	void ParamCapture_func_point(double param1, int param2);
+	void ReturnCapture_func_point(void returnType);
+	#endif // WINGS_C_DEMO_COORDINATES
+
+Figure below will show the automatically generated code for capturing parameters.
+
+::
+
+	int coordinate_destroyTimes = -1;
+	void ParamCapture_coordinate_destroy(location *loc, size_t length, char *ch)
+	{
+		coordinate_destroyTimes++;
+		const char *jsonFile = "paramcapturevalue/wings_c_dem_coordinates/coordinate_destroy.json";
+		cJSON *root = NULL;
+		if (coordinate_destroyTimes == 0){     
+			root = cJSON_CreateObject();
+		}else{
+			char *jsonData = ParamCaptureGetJsonData(jsonFile);
+			root = cJSON_Parse(jsonData);
+		}
+		int coordinate_destroy_len = strlen("coordinate_destroy");
+		char *coordinate_destroy_sp = (char *)malloc(sizeof(char) * (coordinate_destroy_len + 2));
+		sprintf(coordinate_destroy_sp, "coordinate_destroy%d", coordinate_destroyTimes);
+		cJSON *item = cJSON_CreateObject();
+		cJSON_AddItemToObject(root, coordinate_destroy_sp, item);
+		free(coordinate_destroy_sp);
+		/*It is the 1 parameter: loc */
+		cJSON *location_sitem = cJSON_CreateArray();
+		Struct_location_s_P(location_sitem, loc, 1);
+		cJSON_AddItemToObject(item, "loc", location_sitem);
+		/*It is the 2 parameter: length*/
+		cJSON_AddItemToObject(item, "length", cJSON_CreateNumber(length));
+		/*It is the 3 parameter: ch */
+		cJSON_AddItemToObject(item, "ch", cJSON_CreateString(ch));
+		FILE *fp;
+		fp = fopen(jsonFile, "w");
+		fprintf(fp, "%s\n", cJSON_Print(root));
+		fclose(fp);
+	}
+
 
 

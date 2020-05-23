@@ -53,7 +53,7 @@ Function prototype: int coordinate_destory ( location_s * loc, size_t length, ch
 The type of the return value is int , the type of the first parameter is location * , the type of the second parameter is size_t , and the type of the third parameter is char *
 Assign values to the above three parameters.
 
-The complete drive code  for the coordinate_destory function is described in detail in Figure 7 below . 
+The complete drive code  for the coordinate_destory function is described in detail in below . 
 
 ::
 

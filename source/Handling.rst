@@ -7,7 +7,23 @@ Function parameter is void * and function pointer
 -----------------------
 For the types of function parameters of void * and function pointers, wings  first uses static analysis technology to obtain the specific assignment types when the function parameters are void * and function pointers. For example, the function shown in Figure 21 below:
 
-.. image:: /image/figure21.png
+::
+
+	void func(void *p);
+	callFunc(int *p);
+	int callFunc(int *p)
+	{
+	  char *s ="abc";
+	  func(s);
+	  return 0;
+	}
+	int func(int(*f)(int));
+	void functest();
+	void functest()
+	{
+	 func(fun);
+	}
+
 
 Through static analysis, Wings analyzed that the assignment type of func at the called place was char *. During the assignment process, the parameter of func was assigned to char *. Wings mark the specific assignment type of void * on the data table interface.For some types that cannot be determined by analysis technology, wings will display all relevant functions on the interface, the user will select the required type, and the driver will process the corresponding type. As shown in Figure 22 below:
 
