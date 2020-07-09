@@ -36,8 +36,6 @@ The corresponding test class code will be generated for each class in C ++ . As 
 	};
 
 
-For each driver class in below, a corresponding constructor will be generated to initialize the tested class, as shown in below :
-
 ::
 
 	#include "Rectangle.h"
@@ -54,6 +52,9 @@ For each driver class in below, a corresponding constructor will be generated to
 	private:
 	  Rectangle *_Rectangle;
 	};
+
+
+For each driver class in below, a corresponding constructor will be generated to initialize the tested class, as shown in below :
 
 ::
 
