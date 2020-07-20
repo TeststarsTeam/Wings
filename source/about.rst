@@ -9,18 +9,18 @@ After the system integration is completed, wings can be used to generate driver 
 Case
 -------------
 
-  see https://finix.readthedocs.io/
+  See http://www.codewings.net/tutorials/
 
 
 Download
 ------------
 
-  see https://wings.readthedocs.io/zh/latest/install_finix.html
+  See http://www.codewings.net/download/
 
 
 Support
 -------
 
-  星云测试提供对Wings的商业支持。 有关更多信息，定价和支持级别信息，请参阅 http://www.threadingtest.com/
+  See http://www.codewings.net/contact/
   
 
